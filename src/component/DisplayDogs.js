@@ -1,7 +1,7 @@
 import "./DisplayDogs.css"
-export default function DisplayDogs({dogs, refresh}) {
 
-    const element = dogs.map((dog)=> {
+export default function DisplayDogs({dogs, refresh}) {
+    const element = dogs.map((dog) => {
         if (dog.img) {
             return (
                 <li key={dog.breed} className="card">
@@ -11,12 +11,11 @@ export default function DisplayDogs({dogs, refresh}) {
                 </li>
             )
         }
-        
     })
 
     return (
         <div className="container">
-            <button onClick={refresh} > Reset </button>
+            <button onClick={refresh}> Reset </button>
             <ul className="list-container"> 
                 {element}
             </ul>
